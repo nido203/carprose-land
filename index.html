@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarProse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="content-inner-hero">
+
+            <div class="navbar">
+                <div class="logo">
+                    <img src="icon.ico"/><p>CarProse</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Video</a></li>
+                        <li>Get license</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="hero">
+                <h1 class="animate">Simple car maintenance</h1>
+                <p class="animate">CarProse is a free desktop app for efficient, organized, and
+                    hassle-free maintenance tracking</p>
+                <div class="btn-group animate"><button class="download-btn"><img src="images/windows-logo.png"/>Download for Windows</button>
+                    <button class="more-btn">
+                        <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                        fill="currentColor"
+                        />
+                        <path d="M16 12L10 16.3301V7.66987L16 12Z" fill="currentColor" />
+                    </svg> Learn more</button></div>
+                    
+                <span class="animate">Free Public Beta. No registration required.</span>
+                <div class="imgs">
+                    <img class="hero-img animate" value="0.3" src="images/image-hero.png"/>
+                    <img class="cards animate" value="1" src="images/cards.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-inner-features" id="features">
+            <div class="features-h"><h1>What can it do?</h1></div>
+            <div class="features-subheading"><p>Create detailed records for each car, and watch them magically appear in a timeline, making it easy to track your vehicle’s history at a glance.</p></div>
+
+
+            <section class="feature-1">
+                <div class="text">
+                    <h1>Add and Manage Cars.</h1>
+                    <p>Easily add and manage your vehicles with detailed information. View all your cars on the home page and update details anytime to keep your records accurate.</p>
+                </div>
+                <img src="images/ft-1.png"/>
+            </section>
+
+            <section class="feature-2 flip red">
+                <div class="text">
+                    <h1>Detailed Maintenance Records.</h1>
+                    <p>Keep thorough records for each service, including type, cost, mechanic, and mileage. Attach up to 5 documents per record, ensuring all important files are organized and accessible.</p>
+                </div>
+                <img src="images/ft-2.png"/>
+            </section>
+
+            <section class="feature-3">
+                <div class="text">
+                    <h1>Smart Filtering and Search.</h1>
+                    <p>Quickly find specific entries with advanced filtering by service type, refuel, or year. Use the search function to locate records instantly with relevant keywords.</p>
+                </div>
+                <img src="images/ft-3.png"/>
+            </section>
+
+            <section class="feature-4 flip red">
+                <div class="text">
+                    <h1>Data Export, Import, and Backup.</h1>
+                    <p>Export and import your entire database and associated files for easy data transfer and backup. Automatically create backups to a user-specified path, ensuring your data is always safe and secure.</p>
+                </div>
+                <img src="images/ft-4.png"/>
+            </section>
+        </div>
+
+
+        <div class="content-inner-pricing" id="pricing">
+            <div class="pricing-h"><h1>Pricing</h1></div>
+            <div class="pricing-subheading"><p>Download CarProse free beta and give it a try! If you like it and want to keep our lone developer fueled with coffee and get some nifty features, grab a license.</p></div>
+
+            <section class="pricing-section">
+
+
+                <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+                <div class="gumroad-product-embed"><a href="https://mockupea.gumroad.com/l/bhgty">Loading...</a></div>
+
+            </section>
+        </div>
+
+
+        
+        <div class="pricing-h"><h1>See how it works.</h1></div>
+
+        <section class="demo-video">
+            <div class="video"></div>
+        </section>
+
+
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+            this.querySelectorAll(".hero-img").forEach((shift) => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 90;
+                const y = (window.innerHeight - event.pageY * position) / 90;
+ 
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+
+            this.querySelectorAll(".cards").forEach((shift) => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 90;
+                const y = (window.innerHeight - event.pageY * position) / 90;
+ 
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
+    </script>
+    
+</body>
+</html>
